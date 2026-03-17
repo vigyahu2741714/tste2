@@ -1,0 +1,103 @@
+body{
+    overflow-x: hidden;
+    padding: 0 3vh 0 3vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5vw;
+    padding: 0;
+    margin: 0;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    border-radius: 3vh;
+    padding: 2vh;
+    background: #dddddd;
+    display: flex;
+    gap: 1vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+div.card h2{
+    text-align: center;
+    font-size: 4vh;
+    color: black;
+    font-family:  "Comic Sans MS", cursive;
+    margin: 0;
+}
+
+div.card h3{
+    text-align: center;
+    margin: 0;
+    font-weight: normal;
+    font-size: 3vh;
+    font-family: "Comic Sans MS", cursive;
+}
+
+div.card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 1.5vh;
+}
+
+.container{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vh;
+    justify-content: space-evenly;
+}
+
+.container button{
+    width: 50%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #bbbbbb;
+    border-radius: 3vh;
+    cursor: pointer;
+}
+
+.up{
+    transition: all 0.2s ease-in-out;
+}
+
+.down{
+    transition: all 0.2s ease-in-out;
+}
+
+.up:hover{
+    transform: scale(1.05) rotate(-5deg);
+    background: #5fff00;
+}
+
+.down:hover{
+    transform: scale(1.05) rotate(5deg);
+    background: #ff0000;
+}
+
+.container button:active{
+    transform: scale(0.95);
+    border-radius: 1.5vh;
+}
+
+h1 {
+    font-family: "Comic Sans MS";
+}
+
+

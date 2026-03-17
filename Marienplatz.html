@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marienplatz</title>
+    <link rel="stylesheet" href="/stylesheets/Marienplatz.css">
+</head>
+<body>
+    <section>
+        <div class="backback">
+            <a href="index.html">
+
+                <svg class="back" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+
+            </a>
+        </div>
+        <img src= "https://www.muenchen.de/sites/default/files/styles/3_2_w1008/public/2022-07/marienplatz-750.jpg.webp" alt="hsadjkda">
+        <h1>Marienplatz</h1>
+        <h2>Das Herz der Altstadt mit dem berühmten Rathaus.</h2>
+    </section>
+
+    <section>
+
+
+        <div id="button-container">
+            <button onclick = openTab("allgemein")>Allgemein</button>
+            <button onclick = openTab("erreichbarkeit")>Erreichbarkeit</button>
+            <button onclick = openTab("öffnungszeiten")>Öffnungszeiten</button>
+            <button onclick = openTab("eut")>Verpflegung</button>
+            <button onclick = openTab("tipps")>Tipps</button>
+        </div>
+
+        <div id="content">
+
+            <div class = tabcontent id="allgemein">
+                <br><br>
+
+                <h2>Allgemeine Infos</h2>
+                <br><br>
+                <b>Lage:</b> Zentrum der Münchner Altstadt
+                <br>
+                <b>Bedeutung:</b> Historischer Hauptplatz seit 1158
+                <br>
+                <b>Highlights:</b>
+
+                <ul>
+                    <li>Neues Rathaus mit Glockenspiel</li>
+                    <li>Altes Rathaus</li>
+                    <li>Mariensäule (Namensgeber des Platzes)</li>
+                </ul>
+            </div>
+
+            <div class = tabcontent id="erreichbarkeit">
+                <br><br>
+                <h2>Erreichbarkeit</h2>
+                <br><br>
+                <b>Öffentliche Verkehrsmittel</b>
+                <ul>
+
+                    <li>S-Bahn: Linien S1–S8 → Haltestelle Marienplatz</li>
+
+                    <li>U-Bahn: U3 & U6 → direkt unter dem Platz</li>
+
+                    <li>Bus/Tram: Mehrere Linien in unmittelbarer Nähe</li>
+
+                </ul>
+                <br>
+
+                <b>Vom Flughafen</b>
+                <ul>
+                    <li>S-Bahn S1 oder S8</li>
+
+                    <li>Fahrzeit: ca. 35–45 Minuten</li>
+                </ul>
+                <br><br>
+                <b>Zu Fuß</b>
+                <ul>
+
+                    <li>Viktualienmarkt (2 Minuten)</li>
+
+                    <li>Frauenkirche (5 Minuten)</li>
+                </ul>
+
+            </div>
+
+            <div class = tabcontent id="öffnungszeiten">
+                <br><br>
+                <h2>Öffnungszeiten & beste Besuchszeit</h2>
+                <br><br>
+                <b>Zugänglich:</b> Rund um die Uhr (öffentlicher Platz)
+                <br>
+                <b>Glockenspiel:</b> Täglich um 11:00 & 12:00 Uhr (im Sommer zusätzlich 17:00)
+                <br>
+                <b>Beste Zeit:</b>
+                <ul>
+                    <li>Früh morgens → weniger Touristen</li>
+                    <li>Abends → schöne Beleuchtung</li>
+                    <li>Dezember → Weihnachtsmarkt</li>
+                </ul>
+
+
+
+
+            </div>
+
+            <div class = tabcontent id="eut">
+                <br><br>
+                <h2>Essen & Trinken in der Nähe</h2>
+                <ul>
+                    <li>Traditionelle bayerische Küche</li>
+                    <li>Cafés & Bäckereien rund um den Platz</li>
+                    <li>Food-Stände am Viktualienmarkt</li>
+                </ul>
+            </div>
+
+            <div class="tabcontent" id="tipps">
+                <br><br>
+                <h2>Tipps</h2>
+                <br>
+                <ul>
+                    <li>Sehr touristisch → auf <b>Taschendiebe</b> achten</li>
+                    <li>Ideal als <b>Treffpunkt</b> <i>(„Wir sehen uns am Marienplatz“)</i></li>
+                    <li><b>Beste Fotospots:</b> vor dem Neuen Rathaus oder mit Blick auf die Frauenkirche</li>
+                    <li>Perfekt zum Kombinieren mit <b>Shopping</b> (Kaufingerstraße)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        const buttons = document.querySelectorAll("button");
+        const content = document.getElementsByClassName("tabcontent");
+
+        function loadText(number) {
+            content.innerText = text[number];
+        }
+
+
+        function openTab(name){
+            for (let i = 0; i < content.length; i++) {
+                content[i].style.display = "none";
+            }
+
+            for (let i = 0; i < content.length; i++) {
+                if(content[i].id === name){
+                    content[i].style.display = "block";
+                }
+            }
+        }
+
+        document.getElementById("allgemein").style.display = "block";
+
+    </script>
+</body>
+</html>
